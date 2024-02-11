@@ -2,11 +2,11 @@ FROM node:14
 
 ADD package.json /tmp/package.json
 
-ADD yarn.lock /tmp/yarn.lock
+ADD package-lock.lock /tmp/package-lock.lock
 
 RUN rm -rf build
 
-RUN cd /tmp && yarn install
+RUN cd /tmp && npm install
 
 ADD ./ /src
 
@@ -14,6 +14,6 @@ RUN rm -rf src/node_modules && cp -a /tmp/node_modules /src/
 
 WORKDIR /src
 
-RUN yarn build
+RUN npm build
 
 CMD ["node", "build/src/main.js"]
