@@ -16,4 +16,4 @@ WORKDIR /src
 
 RUN npm run build
 
-CMD ["node", "build/src/main.js"]
+CMD ["node", "src/main.js"]
