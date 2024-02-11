@@ -14,7 +14,7 @@ async function main(){
     const app = await buildServer();
 
     await app.listen({
-        host: env.HOST,
+       // host: env.HOST,
         port: env.PORT
     });
     console.log('server is running');

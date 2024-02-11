@@ -4,8 +4,8 @@ import {z} from 'zod';
 export const env = zennv({
     dotenv: true,
     schema:z.object({
-        HOST: z.string(),
+        HOST: z.string().optional(),
         PORT: z.number().default(3000),
-        DATABASE_CONNNECTION: z.string(),
+        DATABASE_CONNNECTION: z.string().optional(),
     }),
 })
