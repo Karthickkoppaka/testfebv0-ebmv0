@@ -2,7 +2,7 @@ FROM node:14
 
 ADD package.json /tmp/package.json
 
-ADD package-lock.lock /tmp/package-lock.lock
+#ADD package-lock.lock /tmp/package-lock.lock
 
 RUN rm -rf build
 
@@ -14,6 +14,6 @@ RUN rm -rf src/node_modules && cp -a /tmp/node_modules /src/
 
 WORKDIR /src
 
-RUN npm build
+RUN npm run build
 
 CMD ["node", "build/src/main.js"]
