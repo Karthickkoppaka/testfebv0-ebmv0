@@ -6,7 +6,7 @@ import { defaultRoutes } from '../routes/default.routes';
 export async function buildServer(){
     const app = fastify({logger,});
 
-    app.register(deliverooEventRoutes, {prefix:'/api/v1/order/events'});
+    app.register(deliverooEventRoutes, {prefix:'/api/v1/order/deliveroo/events'});
     app.register(defaultRoutes, {prefix:'/api/v1'});
 
     return app;
