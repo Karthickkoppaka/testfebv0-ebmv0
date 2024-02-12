@@ -10,5 +10,5 @@ export default async function orderEventsHandler(
     // console.log('reply data', reply);
     // logger.info(request, 'orderEventsHandler request data');
     // logger.info(reply, 'orderEventsHandler reply data');
-    return reply.code(200).send('deliveroo orderEventsHandler request received');
+    return reply.code(200).send('uber orderEventsHandler request received');
 }
