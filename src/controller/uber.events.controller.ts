@@ -8,7 +8,7 @@ export default async function orderEventsHandler(
 ){
     // console.log('request data', request);
     // console.log('reply data', reply);
-    // logger.info(request, 'orderEventsHandler request data');
-    // logger.info(reply, 'orderEventsHandler reply data');
+    logger.info(request, 'uber orderEventsHandler request data');
+    logger.info(reply, 'uber orderEventsHandler reply data');
     return reply.code(200).send('uber orderEventsHandler request received');
 }
